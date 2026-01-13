@@ -50,9 +50,10 @@ You can see the documentation of each dataset using the help operator
 ``` r
 ?agriculture_idam
 ?aids_amazonas
+?gdp_amazonas
 ?humidity_manaus
 ?malaria_amazonas
-?pib_trimestral
+?prf_amazonas
 ?rionegro_amazonas
 ?school_read_levels
 ```
