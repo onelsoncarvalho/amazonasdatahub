@@ -1,6 +1,6 @@
 Package: amazonasdatahub
 Title: Datasets from Amazonas (AM) to apply Deep Learning and statistical methods
-Version: 1.1.0
+Version: 1.2.1
 Authors@R: 
     c(
       person("Nelson", "Carvalho", email = "nelsoncarvalho.negocios@gmail.com", role = c("aut", "cre")),
