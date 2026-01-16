@@ -42,6 +42,7 @@
 #' # Loading dplyr and ggplot
 #' require(dplyr)
 #' require(ggplot2)
+#' require(forcats)
 #'
 #' # Counting accidents by weather condition and ploting
 #' prf_amazonas %>%

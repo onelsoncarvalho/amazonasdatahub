@@ -54,6 +54,7 @@ Traffic accident data from Amazonas (2012-2025)
 # Loading dplyr and ggplot
 require(dplyr)
 require(ggplot2)
+require(forcats)
 
 # Counting accidents by weather condition and ploting
 prf_amazonas \%>\%

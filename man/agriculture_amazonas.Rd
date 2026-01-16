@@ -36,7 +36,7 @@ This database, which is the consolidation of data from IDAM's activity reports, 
 \examples{
 \donttest{
 # Cassava production plot (Gráfico de Produção de Mandioca)
-mandioca_prod <- agriculture_idam[agriculture_idam$cultivation == "Mandioca", ]
+mandioca_prod <- agriculture_amazonas[agriculture_amazonas$cultivation == "Mandioca", ]
 plot(
   mandioca_prod$planted,
   mandioca_prod$harvested,

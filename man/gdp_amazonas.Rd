@@ -49,12 +49,12 @@ require(dplyr)
 require(ggplot2)
 
 # Selecting only year and taxes and ploting
-pib_trimestral \%>\%
+gdp_amazonas \%>\%
   select(year, taxes) \%>\%
   ggplot(., aes(x = year, y = taxes)) +
   geom_line(linewidth = 1L, colour = "#cb181d") +
   geom_hline(
-    yintercept = mean(pib_trimestral$taxes),
+    yintercept = mean(gdp_amazonas$taxes),
     linetype = "dashed",
     size = 1
   ) +
