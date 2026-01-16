@@ -1,6 +1,6 @@
-#' prf_amazonas - Traffic accident data from Amazonas recorded by Federal Highway Police in 2025
+#' prf_amazonas - Traffic accident data from Amazonas recorded by Federal Highway Police (2012-2025)
 #'
-#' Traffic accident data from Amazonas 2025
+#' Traffic accident data from Amazonas (2012-2025)
 #'
 #' @format ## `prf_amazonas' A data frame with 116 rows and 30 columns:
 #' \describe{

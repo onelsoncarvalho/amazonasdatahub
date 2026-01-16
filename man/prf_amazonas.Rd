@@ -3,7 +3,7 @@
 \docType{data}
 \name{prf_amazonas}
 \alias{prf_amazonas}
-\title{prf_amazonas - Traffic accident data from Amazonas recorded by Federal Highway Police in 2025}
+\title{prf_amazonas - Traffic accident data from Amazonas recorded by Federal Highway Police (2012-2025)}
 \format{
 \subsection{`prf_amazonas' A data frame with 116 rows and 30 columns:}{
 
@@ -46,7 +46,7 @@ https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-da-
 prf_amazonas
 }
 \description{
-Traffic accident data from Amazonas 2025
+Traffic accident data from Amazonas (2012-2025)
 }
 \examples{
 \donttest{
