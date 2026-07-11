@@ -32,7 +32,7 @@ install.packages("devtools")
 library(devtools)
 
 # installing amazonasdatahub
-devtools::install_github("Nelson-DevStack/amazonasdatahub")
+devtools::install_github("onelsoncarvalho/amazonasdatahub")
 ```
 
 ## Usage

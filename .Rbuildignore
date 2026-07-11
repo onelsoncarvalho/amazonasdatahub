@@ -6,3 +6,9 @@
 ^codes$
 ^assets$
 ^README\.Rmd$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.positai$
+^\.claude$
+^\.github$
