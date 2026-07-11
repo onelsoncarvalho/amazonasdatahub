@@ -1,0 +1,124 @@
+# amazonasdatahub
+
+The goal of amazonasdatahub is to gather various data sets from the
+state of Amazonas (AM), Brazil, to which Deep Learning can be applied.
+
+With this open-source R package, you will have access to various
+datasets to apply Deep Learning and statistical methods.
+
+## Installation
+
+To install amazonasdatahub, you need to have the following tools
+installed on your computer or development environment:
+
+- R version 4.41.1 (2024-06-14) – “Race for Your Life”;
+- devtools package from R.
+
+You can install the development version of amazonasdatahub from
+[GitHub](https://github.com/) with:
+
+``` r
+
+# Install devtools package
+install.packages("devtools")
+
+# Load devtools
+library(devtools)
+
+# installing amazonasdatahub
+devtools::install_github("onelsoncarvalho/amazonasdatahub")
+```
+
+## Usage
+
+Once the `amazonasdatahub` is installed, use library() or require() to
+load the package.
+
+``` r
+
+library(amazonasdatahub)
+```
+
+You can see the documentation of each dataset using the help operator
+“?”.
+
+``` r
+
+?agriculture_idam
+?aids_amazonas
+?gdp_amazonas
+?humidity_manaus
+?malaria_amazonas
+?prf_amazonas
+?rionegro_amazonas
+?school_read_levels
+```
+
+## Example
+
+The dataset `aids_amazonas` contains data of the AIDS occurrences in
+each municipality from Amazonas.
+
+One of the analysis that can be made is: visualize the time series of
+counts filtered by municipality, where each case is grouped by the
+sex/gender of each observation. To do this, we will use the dplyr
+package to structure the data and the ggplot2 package to create and
+customize the chart.
+
+``` r
+
+# Loading dplyr and ggplot to structure the data
+require(dplyr)
+require(ggplot2)
+```
+
+``` r
+
+# Filtering by municipality and plotting case count by gender
+aids_amazonas %>%
+  filter(name_muni == "Manaus") %>%
+  group_by(gender) %>%
+  ggplot(aes(x = year, y = cases, group = gender, color = gender)) +
+  geom_line() +
+  scale_color_manual(values = c("blue", "red")) +
+  theme_minimal() +
+  labs(
+    title = "AIDS ocurrences in Manaus (2011-2023)",
+    x = "Year",
+    y = "Case count",
+    color = "Gender"
+  )
+```
+
+![](reference/figures/README-unnamed-chunk-6-1.png)
+
+# Package index
+
+## All functions
+
+- [`agriculture_amazonas`](https://onelsoncarvalho.github.io/amazonasdatahub/reference/agriculture_amazonas.md)
+  : agriculture_amazonas - Plant production data from the Institute of
+  Sustainable Agricultural and Forestry Development of Amazonas - IDAM
+  (2023).
+- [`aids_amazonas`](https://onelsoncarvalho.github.io/amazonasdatahub/reference/aids_amazonas.md)
+  : aids_amazonas - A dataset of AIDS occurrences from 2011 to 2023 in
+  Amazonas
+- [`gdp_amazonas`](https://onelsoncarvalho.github.io/amazonasdatahub/reference/gdp_amazonas.md)
+  : gdp_amazonas - Gross Domestic Product - GDP of Amazonas
+- [`helloword()`](https://onelsoncarvalho.github.io/amazonasdatahub/reference/helloword.md)
+  : Hello World
+- [`humidity_manaus`](https://onelsoncarvalho.github.io/amazonasdatahub/reference/humidity_manaus.md)
+  : humidity_manaus - Time series with Extreme Values of Limited Range
+- [`malaria_amazonas`](https://onelsoncarvalho.github.io/amazonasdatahub/reference/malaria_amazonas.md)
+  : malaria_amazonas - An integrated dataset of malaria notifications in
+  the state of Amazonas
+- [`prf_amazonas`](https://onelsoncarvalho.github.io/amazonasdatahub/reference/prf_amazonas.md)
+  : prf_amazonas - Traffic accident data from Amazonas recorded by
+  Federal Highway Police (2012-2025)
+- [`rionegro_amazonas`](https://onelsoncarvalho.github.io/amazonasdatahub/reference/rionegro_amazonas.md)
+  : rionegro_amazonas - A dataset of the Rio Negro River (Amazonas)
+  level from 2003 to 2023
+- [`srl_muni`](https://onelsoncarvalho.github.io/amazonasdatahub/reference/srl_muni.md)
+  : srl_muni - School Read Levels - Physical literacy and reading
+  performance of amazonian schoolchildren
+
