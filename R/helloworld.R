@@ -1,6 +1,6 @@
 #' Hello World
 #'
-#' @return string "Hello World"
+#' @return string "> Hello World"
 #' @export
 #'
 #' @examples
