@@ -55,7 +55,7 @@ You can see the documentation of each dataset using the help operator
 ?malaria_amazonas
 ?prf_amazonas
 ?rionegro_amazonas
-?school_read_levels
+?slr_muni
 ```
 
 ## Example
@@ -92,4 +92,4 @@ aids_amazonas %>%
   )
 ```
 
-<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-6-1.png" alt="" width="100%" />
