@@ -51,7 +51,7 @@ You can see the documentation of each dataset using the help operator
 ?malaria_amazonas
 ?prf_amazonas
 ?rionegro_amazonas
-?school_read_levels
+?slr_muni
 ```
 
 ## Example

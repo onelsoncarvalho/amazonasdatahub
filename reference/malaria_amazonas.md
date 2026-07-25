@@ -92,10 +92,6 @@ malaria_amazonas
 
   Health region of residence different than that of notification
 
-- autochthonous_case:
-
-  Health region of infection identical to that of residence
-
 - exam_result:
 
   Result of examination
