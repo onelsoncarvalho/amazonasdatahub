@@ -68,7 +68,10 @@ agriculture_amazonas
 
 ## Source
 
-https://www.idam.am.gov.br/biblioteca/relatorio-de-atividades-rat-23-2/
+INSTITUTO DE DESENVOLVIMENTO AGROPECUÁRIO E FLORESTAL SUSTENTÁVEL DO
+ESTADO DO AMAZONAS (IDAM). Relatório de Atividades (RAT 23-2). Manaus:
+IDAM, 2023. Disponível em:
+https://www.idam.am.gov.br/biblioteca/relatorio-de-atividades-rat-23-2/.
 
 ## Examples
 

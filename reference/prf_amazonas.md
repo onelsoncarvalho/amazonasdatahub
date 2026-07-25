@@ -127,7 +127,9 @@ prf_amazonas
 
 ## Source
 
-https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-da-prf
+Brasil. Polícia Rodoviária Federal (PRF). Dados Abertos da PRF:
+Acidentes de Trânsito.
+https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-da-prf.
 
 ## Examples
 
