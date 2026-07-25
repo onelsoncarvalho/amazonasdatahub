@@ -47,7 +47,7 @@
 }
 }
 \source{
-https://www.synapse.org/Synapse:syn21552203/files
+Lais Baroni, M. P. (2020). An Integrated Dataset of Malaria Notifications in the Legal Amazon (Dataset). Synapse. https://doi.org/10.7303/SYN21552203
 }
 \usage{
 malaria_amazonas
