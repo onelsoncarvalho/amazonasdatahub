@@ -12,7 +12,7 @@
 #'   \item{semester}{Measurement semester}
 #' }
 #'
-#' @source https://portodemanaus.com.br/nivel-do-rio-negro/
+#' @source Porto de Manaus. Nível do Rio Negro. https://portodemanaus.com.br/nivel-do-rio-negro/.
 #'
 #' @importFrom dplyr %>% filter
 #' @importFrom ggplot2 ggplot aes geom_boxplot stat_boxplot theme_minimal

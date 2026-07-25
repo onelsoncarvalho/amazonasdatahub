@@ -18,7 +18,7 @@
 }
 }
 \source{
-https://portodemanaus.com.br/nivel-do-rio-negro/
+Porto de Manaus. Nível do Rio Negro. https://portodemanaus.com.br/nivel-do-rio-negro/.
 }
 \usage{
 rionegro_amazonas
