@@ -24,7 +24,6 @@
 #'   \item{treatment_month}{Month in which the treatment started}
 #'   \item{treatment_year}{Year in which the treatment started}
 #'   \item{migration}{Health region of residence different than that of notification}
-#'   \item{autochthonous_case}{Health region of infection identical to that of residence}
 #'   \item{exam_result}{Result of examination}
 #'   \item{detection_type}{Type of detection}
 #'   \item{exam_type}{Type of examination}
