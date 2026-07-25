@@ -23,6 +23,6 @@
 #'   \item{tde_categorical}{Categorical description of the TDE Score}
 #' }
 #'
-#' @source https://tede.ufam.edu.br/handle/tede/10627
+#' @source ALMEIDA, Thiago da Cruz de. Physical Literacy e desempenho em leitura de escolares amazônicos: um estudo de associação. 2024. 104 f. Dissertação (Mestrado em Educação) - Universidade Federal do Amazonas, Manaus, 2024. Disponível em: https://tede.ufam.edu.br/handle/tede/10627.
 #'
 "srl_muni"
