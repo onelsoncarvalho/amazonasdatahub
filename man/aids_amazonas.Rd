@@ -17,7 +17,7 @@
 }
 }
 \source{
-https://indicadores.aids.gov.br/
+BRASIL. Ministério da Saúde. Departamento de HIV, Aids, Tuberculose, Hepatites Virais e Infecções Sexualmente Transmissíveis. Indicadores HIV, Aids. Available in: https://indicadores.aids.gov.br/.
 }
 \usage{
 aids_amazonas

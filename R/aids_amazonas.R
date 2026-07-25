@@ -11,7 +11,7 @@
 #'   \item{year}{Year of observation}
 #' }
 #'
-#' @source https://indicadores.aids.gov.br/
+#' @source BRASIL. Ministério da Saúde. Departamento de HIV, Aids, Tuberculose, Hepatites Virais e Infecções Sexualmente Transmissíveis. Indicadores HIV, Aids. Available in: https://indicadores.aids.gov.br/.
 #'
 #' @examples
 #' \donttest{
