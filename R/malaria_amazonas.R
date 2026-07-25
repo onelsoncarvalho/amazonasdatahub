@@ -1,9 +1,9 @@
 
 #' malaria_amazonas - An integrated dataset of malaria notifications in the state of Amazonas
 #'
-#' This dataset contains medical records of patients who underwent malaria screening tests in the Legal Amazon. The data in this dataset were filtered to include only the cases reported in the state of Amazonas and for patients who reside specifically in the state of Amazonas.
+#' This dataset contains medical records of patients who underwent malaria screening tests in the Legal Amazon. The data in this dataset were filtered to include only the cases reported in the state of Amazonas and for patients who reside specifically in the state of Amazonas between 2014 and 2019.
 #'
-#' @format ## `malaria_amazonas' A data frame with 1098620 rows and 36 columns:
+#' @format ## `malaria_amazonas' A data frame with 551633 rows and 35 columns:
 #' \describe{
 #'   \item{notification_hr}{Health region of notification}
 #'   \item{notification_county}{County of notification}
@@ -41,7 +41,6 @@
 #'   \item{cvl_case}{Indicates the existence of cases of canine visceral leishmaniasis}
 #'   \item{scheme}{Indicates the treatment scheme employed}
 #'   \item{qty_parasites}{Indicates the number of parasites per mm^3}
-#'   \item{month}{The month in which this data was observed}
 #' }
 #'
 #' @source https://www.synapse.org/Synapse:syn21552203/files
