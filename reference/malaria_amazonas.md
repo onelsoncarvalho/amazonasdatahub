@@ -3,7 +3,8 @@
 This dataset contains medical records of patients who underwent malaria
 screening tests in the Legal Amazon. The data in this dataset were
 filtered to include only the cases reported in the state of Amazonas and
-for patients who reside specifically in the state of Amazonas.
+for patients who reside specifically in the state of Amazonas between
+2014 and 2019.
 
 ## Usage
 
@@ -13,7 +14,7 @@ malaria_amazonas
 
 ## Format
 
-### \`malaria_amazonas' A data frame with 1098620 rows and 36 columns:
+### \`malaria_amazonas' A data frame with 551633 rows and 35 columns:
 
 - notification_hr:
 
@@ -158,10 +159,6 @@ malaria_amazonas
 - qty_parasites:
 
   Indicates the number of parasites per mm^3
-
-- month:
-
-  The month in which this data was observed
 
 ## Source
 

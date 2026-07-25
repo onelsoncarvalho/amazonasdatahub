@@ -10,7 +10,7 @@ helloword()
 
 ## Value
 
-string "Hello World"
+string "\> Hello World"
 
 ## Examples
 
