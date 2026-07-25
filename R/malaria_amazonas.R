@@ -42,7 +42,7 @@
 #'   \item{qty_parasites}{Indicates the number of parasites per mm^3}
 #' }
 #'
-#' @source https://www.synapse.org/Synapse:syn21552203/files
+#' @source Lais Baroni, M. P. (2020). An Integrated Dataset of Malaria Notifications in the Legal Amazon [Dataset]. Synapse. https://doi.org/10.7303/SYN21552203
 #'
 #'@examples
 #'\donttest{
