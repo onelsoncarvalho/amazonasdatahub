@@ -7,7 +7,7 @@
 helloword()
 }
 \value{
-string "Hello World"
+string "> Hello World"
 }
 \description{
 Hello World
