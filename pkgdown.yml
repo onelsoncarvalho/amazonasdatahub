@@ -1,5 +1,13 @@
 pandoc: 3.8.3
 pkgdown: 2.2.1
 pkgdown_sha: ~
-articles: {}
-last_built: 2026-07-25T22:14Z
+articles:
+  br/agriculture_amazonas: br/agriculture_amazonas.html
+  br/aids_amazonas: br/aids_amazonas.html
+  br/gdp_amazonas: br/gdp_amazonas.html
+  br/humidity_manaus: br/humidity_manaus.html
+  br/malaria_amazonas: br/malaria_amazonas.html
+  br/prf_amazonas: br/prf_amazonas.html
+  br/rionegro_amazonas: br/rionegro_amazonas.html
+  br/srl_muni: br/srl_muni.html
+last_built: 2026-08-20T02:02Z

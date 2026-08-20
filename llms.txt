@@ -1,5 +1,7 @@
 # amazonasdatahub
 
+Versão em Português ===========
+
 The goal of amazonasdatahub is to gather various data sets from the
 state of Amazonas (AM), Brazil, to which Deep Learning can be applied.
 
@@ -17,8 +19,7 @@ installed on your computer or development environment:
 You can install the development version of amazonasdatahub from
 [GitHub](https://github.com/) with:
 
-``` r
-
+``` R
 # Install devtools package
 install.packages("devtools")
 
@@ -34,16 +35,14 @@ devtools::install_github("onelsoncarvalho/amazonasdatahub")
 Once the `amazonasdatahub` is installed, use library() or require() to
 load the package.
 
-``` r
-
+``` R
 library(amazonasdatahub)
 ```
 
 You can see the documentation of each dataset using the help operator
 “?”.
 
-``` r
-
+``` R
 ?agriculture_idam
 ?aids_amazonas
 ?gdp_amazonas
@@ -65,14 +64,10 @@ sex/gender of each observation. To do this, we will use the dplyr
 package to structure the data and the ggplot2 package to create and
 customize the chart.
 
-``` r
-
+``` R
 # Loading dplyr and ggplot to structure the data
 require(dplyr)
 require(ggplot2)
-```
-
-``` r
 
 # Filtering by municipality and plotting case count by gender
 aids_amazonas %>%
@@ -115,3 +110,15 @@ aids_amazonas %>%
 - [`srl_muni`](srl_muni.md) : srl_muni - School Read Levels - Physical
   literacy and reading performance of amazonian schoolchildren
 
+# Articles
+
+### All vignettes
+
+- [agriculture_amazonas](br/agriculture_amazonas.md):
+- [aids_amazonas](br/aids_amazonas.md):
+- [gdp_amazonas](br/gdp_amazonas.md):
+- [humidity_manaus](br/humidity_manaus.md):
+- [malaria_amazonas](br/malaria_amazonas.md):
+- [prf_amazonas](br/prf_amazonas.md):
+- [rionegro_amazonas](br/rionegro_amazonas.md):
+- [srl_muni](br/srl_muni.md):
