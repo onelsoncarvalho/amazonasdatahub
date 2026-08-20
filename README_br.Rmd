@@ -1,0 +1,94 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# amazonasdatahub <img src="man/figures/logo.png" align="right" height="139" alt="Amazonasd DataHub logo">
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+Versão em Português  ===========
+
+The goal of amazonasdatahub is to gather various data sets from the state of Amazonas (AM), Brazil, to which Deep Learning can be applied.
+
+With this open-source R package, you will have access to various datasets to apply Deep Learning and statistical methods.
+
+## Installation
+
+To install amazonasdatahub, you need to have the following tools installed on your computer or development environment:
+
+- R version 4.41.1 (2024-06-14) – “Race for Your Life”;
+- devtools package from R.
+
+You can install the development version of amazonasdatahub from [GitHub](https://github.com/) with:
+
+```{r eval=FALSE}
+# Install devtools package
+install.packages("devtools")
+
+# Load devtools
+library(devtools)
+
+# installing amazonasdatahub
+devtools::install_github("onelsoncarvalho/amazonasdatahub")
+```
+
+## Usage
+
+Once the ```amazonasdatahub``` is installed, use library() or require() to load the package.
+
+```{r}
+library(amazonasdatahub)
+```
+
+You can see the documentation of each dataset using the help operator "?".
+```{r, eval = FALSE}
+?agriculture_idam
+?aids_amazonas
+?gdp_amazonas
+?humidity_manaus
+?malaria_amazonas
+?prf_amazonas
+?rionegro_amazonas
+?slr_muni
+```
+
+## Example
+
+The dataset ```aids_amazonas``` contains data of the AIDS occurrences in each municipality from Amazonas.
+
+One of the analysis that can be made is: visualize the time series of counts filtered by municipality, where each case is grouped by the sex/gender of each observation. To do this, we will use the dplyr package to structure the data and the ggplot2 package to create and customize the chart.
+
+```{r message=FALSE, results='hide', warning=FALSE}
+# Loading dplyr and ggplot to structure the data
+require(dplyr)
+require(ggplot2)
+```
+
+```{r, dpi = 300}
+# Filtering by municipality and plotting case count by gender
+aids_amazonas %>%
+  filter(name_muni == "Manaus") %>%
+  group_by(gender) %>%
+  ggplot(aes(x = year, y = cases, group = gender, color = gender)) +
+  geom_line() +
+  scale_color_manual(values = c("blue", "red")) +
+  theme_minimal() +
+  labs(
+    title = "AIDS ocurrences in Manaus (2011-2023)",
+    x = "Year",
+    y = "Case count",
+    color = "Gender"
+  )
+```

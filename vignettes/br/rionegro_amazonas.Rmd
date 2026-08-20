@@ -1,0 +1,72 @@
+---
+title: "rionegro_amazonas"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{rionegro_amazonas}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+Uma base de dados do nível do Rio Negro (Amazonas) de 2003 a 2023.
+
+### Descrição
+
+Essa base de dados possui dados do nível do Rio Negro, do Estado do Amazonas (Brasil), compilando informações de anos, semestres e dias, junto com o nível do rio em metros e se encheu ou vazou (em centímetros).
+
+
+### Uso
+
+```{r, eval = FALSE}
+rionegro_amazonas
+```
+
+### Formato
+
+‘rionegro_amazonas’ Um data frame com 8003 linhas e 7 colunas:
+
+#### level_m
+
+Nível do rio em metros
+
+#### increase_decrease_cm
+
+Se o nível do rio encheu ou vazou (em centímetros)
+
+#### day
+
+Dia da medição
+
+#### month
+
+Mês da medição
+
+#### year
+
+Ano da medição
+
+#### semester
+
+Semestre da medição
+
+### Fonte
+
+Porto de Manaus. Nível do Rio Negro. https://portodemanaus.com.br/nivel-do-rio-negro/.
+
+### Exemplos
+
+```{r message=FALSE, warning=FALSE}
+# Boxplots do nível de água (em metros) do Rio Negro (Amazonas)
+require(ggplot2)
+require(dplyr)
+require(amazonasdatahub)
+
+rionegro_amazonas %>%
+  ggplot(aes(x = year, y = level_m, group = year)) +
+  stat_boxplot(geom = "errorbar") +
+  geom_boxplot() +
+  theme_minimal() +
+  labs(
+    x = "Ano",
+    y = "Nível do rio (m)"
+  )
+```

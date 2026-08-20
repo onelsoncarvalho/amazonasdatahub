@@ -15,6 +15,20 @@ navbar:
       menu:
         - text: "agriculture_amazonas"
           href: "articles/br/agriculture_amazonas.html"
+        - text: "aids_amazonas"
+          href: "articles/br/aids_amazonas.html"
+        - text: "gdp_amazonas"
+          href: "articles/br/gdp_amazonas.html"
+        - text: "humidity_manaus"
+          href: "articles/br/humidity_manaus.html"
+        - text: "malaria_amazonas"
+          href: "articles/br/malaria_amazonas.html"
+        - text: "prf_amazonas"
+          href: "articles/br/prf_amazonas.html"
+        - text: "rionegro_amazonas"
+          href: "articles/br/rionegro_amazonas.html"
+        - text: "srl_muni"
+          href: "articles/br/srl_muni.html"
     language:
       text: "Idioma"
       menu:
