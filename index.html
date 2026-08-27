@@ -41,7 +41,16 @@
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-bases-de-dados" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Bases de Dados</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-bases-de-dados">
-<li><a class="dropdown-item" href="articles/br/agriculture_amazonas.html">agriculture_amazonas</a></li>
+<li><a class="dropdown-item" href="articles/index.html">Visão Geral (Todas as bases de dados)</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="articles/br/agriculture_amazonas.html">agriculture_amazonas</a></li>
+    <li><a class="dropdown-item" href="articles/br/aids_amazonas.html">aids_amazonas</a></li>
+    <li><a class="dropdown-item" href="articles/br/gdp_amazonas.html">gdp_amazonas</a></li>
+    <li><a class="dropdown-item" href="articles/br/humidity_manaus.html">humidity_manaus</a></li>
+    <li><a class="dropdown-item" href="articles/br/malaria_amazonas.html">malaria_amazonas</a></li>
+    <li><a class="dropdown-item" href="articles/br/prf_amazonas.html">prf_amazonas</a></li>
+    <li><a class="dropdown-item" href="articles/br/rionegro_amazonas.html">rionegro_amazonas</a></li>
+    <li><a class="dropdown-item" href="articles/br/srl_muni.html">srl_muni</a></li>
   </ul>
 </li>
       </ul>
@@ -68,183 +77,66 @@
 </div>
 <!-- badges: start -->
 <!-- badges: end -->
-<p>The goal of <code>amazonasdatahub</code> is to aggregate databases from the State of Amazonas (AM), Brazil, for conducting studies and preparing educational materials, as well as to facilitate access to organized and processed data, thereby supporting research and teaching and enabling the application of statistical methods.</p>
-<p>Full documentation of both Python and R versions is available in the following languages/Documentação das versões em Python e R estão disponíveis nos seguintes idiomas:</p>
-<ul>
-<li>
-<a href="https://onelsoncarvalho/amazonasdatahubsite/en" class="external-link">English</a>;</li>
-<li>
-<a href="https://onelsoncarvalho/amazonasdatahubsite" class="external-link">🇧🇷 Português (BR)</a>;</li>
-</ul>
-<p>R only documentation and vignettes:</p>
-<ul>
-<li>
-<a href="https://onelsoncarvalho/amazonasdatahub" class="external-link">English</a>;</li>
-<li>
-<a href="https://onelsoncarvalho/amazonasdatahub/br" class="external-link">🇧🇷 Português (BR)</a>;</li>
-</ul>
-<div class="section level2">
-<h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
-</h2>
-<p>This <code>amazonasdatahub</code> package provides databases from various types and sources, all of which concern the State of Amazonas.</p>
-<p>List of available datasets:</p>
-<table class="table">
-<colgroup>
-<col width="33%">
-<col width="33%">
-<col width="33%">
-</colgroup>
-<thead><tr>
-<th align="left">Dataset</th>
-<th align="center">Area</th>
-<th align="left">Source</th>
-</tr></thead>
-<tbody>
-<tr>
-<td align="left">agriculture_amazonas</td>
-<td align="center">Agriculture and Livestock</td>
-<td align="left">Institute of Agricultural and Sustainable Forestry Development of the State of Amazonas - 2024</td>
-</tr>
-<tr>
-<td align="left">aids_amazonas</td>
-<td align="center">Health</td>
-<td align="left">Department of HIV, AIDS, Tuberculosis, Viral Hepatitis, and Sexually Transmitted Infections, 2024</td>
-</tr>
-<tr>
-<td align="left">gdp_amazonas</td>
-<td align="center">Economy</td>
-<td align="left">Scientific Journal of Applied Social and Clinical Science - TIME SERIES ANALYSIS FOR THE QUARTERLY GROSS DOMESTIC PRODUCT OF AMAZONAS</td>
-</tr>
-<tr>
-<td align="left">humidity_manaus</td>
-<td align="center">Climate</td>
-<td align="left">NASCIMENTO, Leonardo Brandão Freitas; LIMA, Max Sousa; DUCZMAL, Luiz H. P-min-stable regression models for time series with extreme values of limited range. Environmetrics, Issue 2, v. 36, 2025.</td>
-</tr>
-<tr>
-<td align="left">malaria_amazonas</td>
-<td align="center">Health</td>
-<td align="left">Lais Baroni, M. P. (2020). An Integrated Dataset of Malaria Notifications in the Legal Amazon (Dataset). Synapse. <a href="https://doi.org/10.7303/SYN21552203" class="external-link uri">https://doi.org/10.7303/SYN21552203</a>
-</td>
-</tr>
-<tr>
-<td align="left">prf_amazonas</td>
-<td align="center">Road Safety</td>
-<td align="left">Brasil. Polícia Rodoviária Federal (PRF). Dados Abertos da PRF: Acidentes de Trânsito</td>
-</tr>
-<tr>
-<td align="left">rionegro_amazonas</td>
-<td align="center">Environment</td>
-<td align="left">Porto de Manaus. Nível do Rio Negro</td>
-</tr>
-<tr>
-<td align="left">srl_muni</td>
-<td align="center">Education</td>
-<td align="left">ALMEIDA, Thiago da Cruz de. Physical Literacy e desempenho em leitura de escolares amazônicos: um estudo de associação. 2024. 104 f. Dissertação (Mestrado em Educação) - Universidade Federal do Amazonas, Manaus, 2024.</td>
-</tr>
-</tbody>
-</table>
-</div>
+<p>Versão em Português ===========</p>
+<p>The goal of amazonasdatahub is to gather various data sets from the state of Amazonas (AM), Brazil, to which Deep Learning can be applied.</p>
+<p>With this open-source R package, you will have access to various datasets to apply Deep Learning and statistical methods.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>To install <code>amazonasdatahub</code>, you need to have the following tools installed on your computer or development environment:</p>
+<p>To install amazonasdatahub, you need to have the following tools installed on your computer or development environment:</p>
 <ul>
-<li>R version 4.41.1 (2024-06-14) or above;</li>
-<li>
-<code>remotes</code> package from R.</li>
+<li>R version 4.41.1 (2024-06-14) – “Race for Your Life”;</li>
+<li>devtools package from R.</li>
 </ul>
-<p>You can install the development version of <code>amazonasdatahub</code> with:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Install remotes package</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># Load remotes</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://remotes.r-lib.org" class="external-link">remotes</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># installing amazonasdatahub</span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"onelsoncarvalho/amazonasdatahub"</span><span class="op">)</span></span></code></pre></div>
+<p>You can install the development version of amazonasdatahub from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># Install devtools package</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="co"># Load devtools</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="fu">library</span>(devtools)</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="co"># installing amazonasdatahub</span></span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"onelsoncarvalho/amazonasdatahub"</span>)</span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="usage-and-examples">Usage and Examples<a class="anchor" aria-label="anchor" href="#usage-and-examples"></a>
+<h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
-<div class="section level3">
-<h3 id="loading-amazonasdatahub">Loading <code>amazonasdatahub</code>
-<a class="anchor" aria-label="anchor" href="#loading-amazonasdatahub"></a>
-</h3>
-<p>Use <code><a href="https://rdrr.io/r/base/library.html" class="external-link">library()</a></code> or <code><a href="https://rdrr.io/r/base/library.html" class="external-link">require()</a></code> to load the package.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://onelsoncarvalho.github.io/amazonasdatahub/" class="external-link">amazonasdatahub</a></span><span class="op">)</span></span></code></pre></div>
-<p>You can check the documentation of each dataset using the help operator “?”.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="op">?</span><span class="va">agriculture_amazonas</span></span>
-<span><span class="op">?</span><span class="va">aids_amazonas</span></span>
-<span><span class="op">?</span><span class="va">gdp_amazonas</span></span>
-<span><span class="op">?</span><span class="va">humidity_manaus</span></span>
-<span><span class="op">?</span><span class="va">malaria_amazonas</span></span>
-<span><span class="op">?</span><span class="va">prf_amazonas</span></span>
-<span><span class="op">?</span><span class="va">rionegro_amazonas</span></span>
-<span><span class="op">?</span><span class="va">slr_muni</span></span></code></pre></div>
+<p>Once the <code>amazonasdatahub</code> is installed, use library() or require() to load the package.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">library</span>(amazonasdatahub)</span></code></pre></div>
+<p>You can see the documentation of each dataset using the help operator “?”.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>?agriculture_idam</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>?aids_amazonas</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>?gdp_amazonas</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>?humidity_manaus</span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>?malaria_amazonas</span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>?prf_amazonas</span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>?rionegro_amazonas</span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>?slr_muni</span></code></pre></div>
 </div>
-<div class="section level3">
-<h3 id="usage-examples">Usage examples<a class="anchor" aria-label="anchor" href="#usage-examples"></a>
-</h3>
-<div class="section level4">
-<h4 id="disease-occurrence">Disease occurrence<a class="anchor" aria-label="anchor" href="#disease-occurrence"></a>
-</h4>
+<div class="section level2">
+<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+</h2>
 <p>The dataset <code>aids_amazonas</code> contains data of the AIDS occurrences in each municipality from Amazonas.</p>
 <p>One of the analysis that can be made is: visualize the time series of counts filtered by municipality, where each case is grouped by the sex/gender of each observation. To do this, we will use the dplyr package to structure the data and the ggplot2 package to create and customize the chart.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Loading dplyr and ggplot to structure the data</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Filtering by municipality and plotting case count by gender</span></span>
-<span><span class="va">aids_amazonas</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">name_muni</span> <span class="op">==</span> <span class="st">"Manaus"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html" class="external-link">group_by</a></span><span class="op">(</span><span class="va">gender</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span>, y <span class="op">=</span> <span class="va">cases</span>, group <span class="op">=</span> <span class="va">gender</span>, color <span class="op">=</span> <span class="va">gender</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html" class="external-link">geom_line</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_color_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"blue"</span>, <span class="st">"red"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span></span>
-<span>    title <span class="op">=</span> <span class="st">"AIDS occurrences in Manaus (2011-2023)"</span>,</span>
-<span>    x <span class="op">=</span> <span class="st">"Year"</span>,</span>
-<span>    y <span class="op">=</span> <span class="st">"Case count"</span>,</span>
-<span>    color <span class="op">=</span> <span class="st">"Gender"</span></span>
-<span>  <span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co"># Loading dplyr and ggplot to structure the data</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="fu">require</span>(dplyr)</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="fu">require</span>(ggplot2)</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="co"># Filtering by municipality and plotting case count by gender</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>aids_amazonas <span class="sc">%&gt;%</span></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>  <span class="fu">filter</span>(name_muni <span class="sc">==</span> <span class="st">"Manaus"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> cases, <span class="at">group =</span> gender, <span class="at">color =</span> gender)) <span class="sc">+</span></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"blue"</span>, <span class="st">"red"</span>)) <span class="sc">+</span></span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"AIDS ocurrences in Manaus (2011-2023)"</span>,</span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
+<span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Case count"</span>,</span>
+<span id="cb4-17"><a href="#cb4-17" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Gender"</span></span>
+<span id="cb4-18"><a href="#cb4-18" tabindex="-1"></a>  )</span></code></pre></div>
 <p><img src="reference/figures/README-unnamed-chunk-6-1.png" alt="" width="100%"></p>
-</div>
-<div class="section level4">
-<h4 id="time-series">Time Series<a class="anchor" aria-label="anchor" href="#time-series"></a>
-</h4>
-<p>The <code>humidity_manaus</code> consists of the minimum relative humidity observed in the city of Manaus from January 2009 to December 2020. We can visualize the time series of the relative humidity during this time interval.</p>
-<p>Using <code>dplyr</code>, it is possible to create a date column, which will be composed of the month and year. Using<code>ggplot2</code>, the time series chart can be plotted.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Loading dplyr and ggplot to structure the data</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># Creating date column and plotting the time series</span></span>
-<span><span class="va">humidity_manaus</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>date <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">year</span>, <span class="st">"-"</span>, <span class="va">month</span>, <span class="st">"-"</span>,<span class="st">"01"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">date</span>, y <span class="op">=</span> <span class="va">rh</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html" class="external-link">geom_line</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span></span>
-<span>    title <span class="op">=</span> <span class="st">"Relative Humidity of Amazonas"</span>,</span>
-<span>    x <span class="op">=</span> <span class="st">"Date"</span>,</span>
-<span>    y <span class="op">=</span> <span class="st">"Relative Humidity"</span></span>
-<span>  <span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-unnamed-chunk-7-1.png" alt="" width="100%"></p>
-</div>
-</div>
-</div>
-<div class="section level2">
-<h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
-</h2>
-<ul>
-<li>CARVALHO, Nelson Geraldo Aquino de; NASCIMENTO, Leonardo Brandão Freitas do. <strong>amazonasdatahub</strong>. 2026. <a href="https://onelsoncarvalho.github.io/amazonasdatahubsite" class="external-link uri">https://onelsoncarvalho.github.io/amazonasdatahubsite</a>.</li>
-</ul>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="license">
