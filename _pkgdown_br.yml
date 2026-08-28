@@ -1,4 +1,4 @@
-# url: https://onelsoncarvalho.github.io/amazonasdatahub/br
+url: https://onelsoncarvalho.github.io/amazonasdatahub/br
 template:
   bootstrap: 5
 
@@ -15,7 +15,7 @@ articles:
       - br/malaria_amazonas
 
   - title: "Economia"
-    desc: "Séries temporais e indicadores do Produto Interno Bruto (PIB) do Amazonas."
+    desc: "Séries temporais/indicadores do Produto Interno Bruto (PIB) do Amazonas."
     contents:
       - br/gdp_amazonas
 
@@ -23,15 +23,19 @@ articles:
     desc: "Dados meteorológicos, umidade do ar em Manaus e cota dos níveis de rios."
     contents:
       - br/humidity_manaus
+
+  - title: "Meio Ambiente"
+    desc: 'Cota dos nível do Rio Negro'
+    contents:
       - br/rionegro_amazonas
 
   - title: "Segurança Rodoviária"
-    desc: "Registros e ocorrências de acidentes de trânsito em rodovias federais."
+    desc: "Registros e ocorrências de acidentes de trânsito"
     contents:
       - br/prf_amazonas
 
   - title: "Educação"
-    desc: "Pesquisas de desempenho escolar e Physical Literacy no ambiente educacional."
+    desc: "Pesquisas de desempenho escolar e letramento físico no ambiente educacional"
     contents:
       - br/srl_muni
 

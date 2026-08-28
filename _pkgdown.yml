@@ -1,78 +1,25 @@
-# url: https://onelsoncarvalho.github.io/amazonasdatahub/br
+url: https://onelsoncarvalho.github.io/amazonasdatahub/
 template:
   bootstrap: 5
 
-articles:
-  - title: "Agropecuária"
-    desc: "Dados sobre produção agrícola e pecuária no estado do Amazonas."
-    contents:
-      - br/agriculture_amazonas
-
-  - title: "Saúde"
-    desc: "Indicadores epidemiológicos de notificações de infecções e agravos em saúde."
-    contents:
-      - br/aids_amazonas
-      - br/malaria_amazonas
-
-  - title: "Economia"
-    desc: "Séries temporais e indicadores do Produto Interno Bruto (PIB) do Amazonas."
-    contents:
-      - br/gdp_amazonas
-
-  - title: "Clima e Meio Ambiente"
-    desc: "Dados meteorológicos, umidade do ar em Manaus e cota dos níveis de rios."
-    contents:
-      - br/humidity_manaus
-      - br/rionegro_amazonas
-
-  - title: "Segurança Rodoviária"
-    desc: "Registros e ocorrências de acidentes de trânsito em rodovias federais."
-    contents:
-      - br/prf_amazonas
-
-  - title: "Educação"
-    desc: "Pesquisas de desempenho escolar e Physical Literacy no ambiente educacional."
-    contents:
-      - br/srl_muni
-
 navbar:
   structure:
-    left: [intro, articles]
+    left: [intro, reference]
     right: [language, github]
   components:
     intro:
-      text: "Início"
+      text: "Home"
       href: "index.html"
-    articles:
-      text: "Bases de Dados"
-      href: "articles/index.html"
-      menu:
-        - text: "Visão Geral (Todas as bases de dados)"
-          href: "articles/index.html"
-        - text: "----------------"
-        - text: "agriculture_amazonas"
-          href: "articles/br/agriculture_amazonas.html"
-        - text: "aids_amazonas"
-          href: "articles/br/aids_amazonas.html"
-        - text: "gdp_amazonas"
-          href: "articles/br/gdp_amazonas.html"
-        - text: "humidity_manaus"
-          href: "articles/br/humidity_manaus.html"
-        - text: "malaria_amazonas"
-          href: "articles/br/malaria_amazonas.html"
-        - text: "prf_amazonas"
-          href: "articles/br/prf_amazonas.html"
-        - text: "rionegro_amazonas"
-          href: "articles/br/rionegro_amazonas.html"
-        - text: "srl_muni"
-          href: "articles/br/srl_muni.html"
+    reference:
+      text: "Reference"
+      href: "reference/index.html"
     language:
-      text: "Idioma"
+      text: "Language"
       menu:
         - text: "English"
-          href: "../index.html"
-        - text: "Português (BR)"
           href: "index.html"
+        - text: "Português (BR)"
+          href: "br/index.html"
     github:
       icon: fab fa-github fa-lg
-      href: https://github.com/onelsoncarvalho/amazonasdatahub
+      href: https://github.com/SEU_USUARIO/amazonasdatahub
