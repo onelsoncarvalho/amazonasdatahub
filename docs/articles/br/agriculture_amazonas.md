@@ -1,0 +1,98 @@
+# agriculture_amazonas
+
+Dados de produção vegetal do Instituto de Desenvolvimento Agropecuário e
+Florestal Sustentável do Amazonas (2023)
+
+### Descrição
+
+Esse banco de dados que é a consolidação de dados dos relatórios de
+atividades do IDAM, traz dados de produção vegetal de cultivos no qual
+esse instituto consideram prioritários.
+
+### Uso
+
+``` r
+agriculture_amazonas
+```
+
+### Formato
+
+‘agriculture_amazonas’ Um data frame com 1072 linhas e 13 colunas:
+
+#### municipality
+
+Município
+
+#### local_unit
+
+Unidade Local do IDAM
+
+#### n_beneficiary
+
+Número de beneficiários assistidos
+
+#### planted
+
+Área plantada em hectares (ha)
+
+#### harvested
+
+Área colhida em hectares (ha)
+
+#### production
+
+Produção (na unidade de medida - measure)
+
+#### estimated_n_beneficiary
+
+Estimativa para o número de beneficiários
+
+#### estimated_planted
+
+Estimativa para a área plantada (ha)
+
+#### estimated_harvested
+
+Estimativa para a área colhida (ha)
+
+#### estimated_production
+
+Estimativa para a produção (na unidade de medida - measure)
+
+#### measure
+
+Unidade de medida da produção
+
+#### cultivation
+
+Cultivo
+
+#### year
+
+Ano do cultivo
+
+### Fonte
+
+INSTITUTO DE DESENVOLVIMENTO AGROPECUÁRIO E FLORESTAL SUSTENTÁVEL DO
+ESTADO DO AMAZONAS (IDAM). Relatório de Atividades (RAT 23-2). Manaus:
+IDAM, 2023. Disponível em:
+<https://www.idam.am.gov.br/biblioteca/relatorio-de-atividades-rat-23-2/>.
+
+### Exemplo
+
+``` r
+# Cassava production plot (Gráfico de Produção de Mandioca)
+library(amazonasdatahub)
+
+mandioca_prod <- agriculture_amazonas[agriculture_amazonas$cultivation == "Mandioca", ]
+plot(
+   mandioca_prod$planted,
+   mandioca_prod$harvested,
+   xlab = "Área plantada (hectare)",
+   ylab = "Área colhida (hectare)",
+   main = "Produção de mandioca no Amazonas",
+   sub = "Área plantada x Área colhida"
+)
+```
+
+![](agriculture_amazonas_files/figure-html/unnamed-chunk-2-1.png)

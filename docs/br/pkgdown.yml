@@ -1,0 +1,16 @@
+pandoc: 3.7.0.2
+pkgdown: 2.2.0
+pkgdown_sha: ~
+articles:
+  br/agriculture_amazonas: br/agriculture_amazonas.html
+  br/aids_amazonas: br/aids_amazonas.html
+  br/gdp_amazonas: br/gdp_amazonas.html
+  br/humidity_manaus: br/humidity_manaus.html
+  br/malaria_amazonas: br/malaria_amazonas.html
+  br/prf_amazonas: br/prf_amazonas.html
+  br/rionegro_amazonas: br/rionegro_amazonas.html
+  br/srl_muni: br/srl_muni.html
+last_built: 2026-08-28T01:14Z
+urls:
+  reference: https://onelsoncarvalho.github.io/amazonasdatahub/br/reference
+  article: https://onelsoncarvalho.github.io/amazonasdatahub/br/articles

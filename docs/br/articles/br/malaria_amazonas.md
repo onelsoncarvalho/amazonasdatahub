@@ -1,0 +1,195 @@
+# malaria_amazonas
+
+Uma base de dados integrada das notificações de malária no estado do
+Amazonas.
+
+### Descrição
+
+Essa base de dados contém registros médicos de pacientes que realizaram
+testes de triagem para malária na Amazônia Legal. Os dados deste
+conjunto foram filtrados para incluir apenas os casos registrados no
+estado do Amazonas entre 2014 e 2019 e de pacientes que residem
+especificamente no estado do Amazonas.
+
+### Uso
+
+``` r
+malaria_amazonas
+```
+
+### Formato
+
+‘malaria_amazonas’ Um data frame com 551633 linhas e 35 colunas.
+
+#### notification_state
+
+Estado da notificação
+
+#### notification_county
+
+Município da notificação
+
+#### infection_state
+
+Estado provável onde o paciente foi infectado
+
+#### infection_hr
+
+Região de saúde provável onde o paciente foi infectado
+
+#### infection_county
+
+Município provável onde o paciente foi infectado
+
+#### home_hr
+
+Região de saúde de residência do paciente
+
+#### home_county
+
+Município de residência do paciente
+
+#### exam_interval
+
+Intervalo de tempo entre a notificação e o exame
+
+#### treatment_interval
+
+Intervalo de tempo entre o exame e o início do tratamento
+
+#### notification_interval
+
+Intervalo de tempo entre os sintomas e a notificação
+
+#### notification_month
+
+Mês em que a notificação foi registrada
+
+#### notification_year
+
+Ano em que a notificação foi registrada
+
+#### symptom_month
+
+Mês em que o paciente sentiu os primeiros sintomas da malária
+
+#### symptom_year
+
+Ano em que o paciente sentiu os primeiros sintomas da malária
+
+#### exam_month
+
+Mês em que o exame foi realizado
+
+#### exam_year
+
+Ano em que o exame foi realizado
+
+#### treatment_month
+
+Mês em que o tratamento foi iniciado
+
+#### treatment_year
+
+Ano em que o tratamento foi iniciado
+
+#### migration
+
+Região de saúde de residência diferente da de notificação
+
+#### exam_result
+
+Resultado do exame
+
+#### detection_type
+
+Tipo de detecção
+
+#### exam_type
+
+Tipo de exame
+
+#### symptom
+
+Indica se o paciente sentiu algum sintoma
+
+#### hemiparasite
+
+Resultado do exame para outros hemiparasitas
+
+#### previous_treatment
+
+Tratamento anterior para P. vivax ou P. falciparum
+
+#### occupation
+
+Atividade principal nos últimos 15 dias
+
+#### education_level
+
+Nível de escolaridade do paciente
+
+#### age
+
+Faixa etária do paciente
+
+#### race
+
+Raça/cor do paciente
+
+#### gender
+
+Gênero do paciente
+
+#### pregnancy
+
+Indica a gravidez e a idade gestacional
+
+#### crosses
+
+Indica a quantidade de parasitemia em cruzes
+
+#### cvl_case
+
+Indica a existência de casos de leishmaniose visceral canina
+
+#### scheme
+
+Indica o esquema de tratamento empregado
+
+#### qty_parasites
+
+Indica o número de parasitas por mm³
+
+### Fonte
+
+Lais Baroni, M. P. (2020). An Integrated Dataset of Malaria
+Notifications in the Legal Amazon (Dataset). Synapse.
+<https://doi.org/10.7303/SYN21552203>
+
+### Exemplos
+
+``` r
+library(dplyr)
+library(ggplot2)
+library(amazonasdatahub)
+
+malaria_amazonas %>%
+  filter(exam_year == 2019) %>%
+  count(exam_result) %>%
+  ggplot(aes(x = reorder(exam_result, -n), y = n)) +
+  geom_bar(stat = "identity") +
+  geom_text(
+    aes(label = n),
+    vjust = -0.5
+  ) +
+  theme_minimal() +
+  labs(
+    title = "Resultados dos testes de malaria realizados em 2019",
+    subtitle = "Casos documentados no Amazonas de pacientes que residem no Estado",
+    x = "Resultado",
+    y = "Contagem"
+  )
+```
+
+![](malaria_amazonas_files/figure-html/unnamed-chunk-2-1.png)
