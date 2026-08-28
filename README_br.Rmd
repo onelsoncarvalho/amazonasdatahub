@@ -18,8 +18,6 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-Versão em Português  ===========
-
 O objetivo do `amazonasdatahub` é reunir bases de dados do Estado do Amazonas (AM), para a realização de estudos e preparação de materiais didáticos, além de facilitar o acesso a dados tratados e organizados, viabilizando pesquisa e ensino e permitindo a aplicação de métodos estatísticos.
 
 A documentação completa de ambas as versões em Python e R estão disponíveis nos seguintes idiomas:

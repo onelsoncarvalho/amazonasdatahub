@@ -7,8 +7,6 @@
 
 <!-- badges: end -->
 
-Versão em Português ===========
-
 O objetivo do `amazonasdatahub` é reunir bases de dados do Estado do
 Amazonas (AM), para a realização de estudos e preparação de materiais
 didáticos, além de facilitar o acesso a dados tratados e organizados,
