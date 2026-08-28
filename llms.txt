@@ -1,49 +1,83 @@
 # amazonasdatahub
 
-Versão em Português ===========
+The goal of `amazonasdatahub` is to aggregate databases from the State
+of Amazonas (AM), Brazil, for conducting studies and preparing
+educational materials, as well as to facilitate access to organized and
+processed data, thereby supporting research and teaching and enabling
+the application of statistical methods.
 
-The goal of amazonasdatahub is to gather various data sets from the
-state of Amazonas (AM), Brazil, to which Deep Learning can be applied.
+Full documentation of both Python and R versions is available in the
+following languages/Documentação das versões em Python e R estão
+disponíveis nos seguintes idiomas:
 
-With this open-source R package, you will have access to various
-datasets to apply Deep Learning and statistical methods.
+- [English](https://onelsoncarvalho.github.io/amazonasdatahubsite/en);
+- [🇧🇷 Português
+  (BR)](https://onelsoncarvalho.github.io/amazonasdatahubsite);
+
+R only documentation and vignettes:
+
+- [English](https://onelsoncarvalho.github.io/amazonasdatahub);
+- [🇧🇷 Português
+  (BR)](https://onelsoncarvalho.github.io/amazonasdatahub/br);
+
+## Overview
+
+This `amazonasdatahub` package provides databases from various types and
+sources, all of which concern the State of Amazonas.
+
+List of available datasets:
+
+| Dataset | Area | Source |
+|:---|:--:|:---|
+| agriculture_amazonas | Agriculture and Livestock | Institute of Agricultural and Sustainable Forestry Development of the State of Amazonas - 2024 |
+| aids_amazonas | Health | Department of HIV, AIDS, Tuberculosis, Viral Hepatitis, and Sexually Transmitted Infections, 2024 |
+| gdp_amazonas | Economy | Scientific Journal of Applied Social and Clinical Science - TIME SERIES ANALYSIS FOR THE QUARTERLY GROSS DOMESTIC PRODUCT OF AMAZONAS |
+| humidity_manaus | Climate | NASCIMENTO, Leonardo Brandão Freitas; LIMA, Max Sousa; DUCZMAL, Luiz H. P-min-stable regression models for time series with extreme values of limited range. Environmetrics, Issue 2, v. 36, 2025. |
+| malaria_amazonas | Health | Lais Baroni, M. P. (2020). An Integrated Dataset of Malaria Notifications in the Legal Amazon (Dataset). Synapse. <https://doi.org/10.7303/SYN21552203> |
+| prf_amazonas | Road Safety | Brasil. Polícia Rodoviária Federal (PRF). Dados Abertos da PRF: Acidentes de Trânsito |
+| rionegro_amazonas | Environment | Porto de Manaus. Nível do Rio Negro |
+| srl_muni | Education | ALMEIDA, Thiago da Cruz de. Physical Literacy e desempenho em leitura de escolares amazônicos: um estudo de associação. 2024. 104 f. Dissertação (Mestrado em Educação) - Universidade Federal do Amazonas, Manaus, 2024. |
 
 ## Installation
 
-To install amazonasdatahub, you need to have the following tools
+To install `amazonasdatahub`, you need to have the following tools
 installed on your computer or development environment:
 
-- R version 4.41.1 (2024-06-14) – “Race for Your Life”;
-- devtools package from R.
+- R version 4.41.1 (2024-06-14) or above;
+- `remotes` package from R.
 
-You can install the development version of amazonasdatahub from
-[GitHub](https://github.com/) with:
+You can install the development version of `amazonasdatahub` with:
 
-``` R
-# Install devtools package
-install.packages("devtools")
+``` r
 
-# Load devtools
-library(devtools)
+# Install remotes package
+install.packages("remotes")
+
+# Load remotes
+library(remotes)
 
 # installing amazonasdatahub
-devtools::install_github("onelsoncarvalho/amazonasdatahub")
+remotes::install_github("onelsoncarvalho/amazonasdatahub")
 ```
 
-## Usage
+## Usage and Examples
 
-Once the `amazonasdatahub` is installed, use library() or require() to
-load the package.
+### Loading `amazonasdatahub`
 
-``` R
+Use [`library()`](https://rdrr.io/r/base/library.html) or
+[`require()`](https://rdrr.io/r/base/library.html) to load the package.
+
+``` r
+
 library(amazonasdatahub)
 ```
 
-You can see the documentation of each dataset using the help operator
+You can check the documentation of each dataset using the help operator
 “?”.
 
-``` R
-?agriculture_idam
+``` r
+
+?agriculture_amazonas
 ?aids_amazonas
 ?gdp_amazonas
 ?humidity_manaus
@@ -53,7 +87,9 @@ You can see the documentation of each dataset using the help operator
 ?slr_muni
 ```
 
-## Example
+### Usage examples
+
+#### Disease occurrence
 
 The dataset `aids_amazonas` contains data of the AIDS occurrences in
 each municipality from Amazonas.
@@ -64,10 +100,14 @@ sex/gender of each observation. To do this, we will use the dplyr
 package to structure the data and the ggplot2 package to create and
 customize the chart.
 
-``` R
+``` r
+
 # Loading dplyr and ggplot to structure the data
 require(dplyr)
 require(ggplot2)
+```
+
+``` r
 
 # Filtering by municipality and plotting case count by gender
 aids_amazonas %>%
@@ -78,7 +118,7 @@ aids_amazonas %>%
   scale_color_manual(values = c("blue", "red")) +
   theme_minimal() +
   labs(
-    title = "AIDS ocurrences in Manaus (2011-2023)",
+    title = "AIDS occurrences in Manaus (2011-2023)",
     x = "Year",
     y = "Case count",
     color = "Gender"
@@ -87,68 +127,81 @@ aids_amazonas %>%
 
 ![](reference/figures/README-unnamed-chunk-6-1.png)
 
+#### Time Series
+
+The `humidity_manaus` consists of the minimum relative humidity observed
+in the city of Manaus from January 2009 to December 2020. We can
+visualize the time series of the relative humidity during this time
+interval.
+
+Using `dplyr`, it is possible to create a date column, which will be
+composed of the month and year. Using`ggplot2`, the time series chart
+can be plotted.
+
+``` r
+
+# Loading dplyr and ggplot to structure the data
+require(dplyr)
+require(ggplot2)
+
+# Creating date column and plotting the time series
+humidity_manaus %>%
+  mutate(date = as.Date(paste0(year, "-", month, "-","01"))) %>%
+  ggplot(aes(x = date, y = rh)) +
+  geom_line() +
+  theme_minimal() +
+  labs(
+    title = "Relative Humidity of Amazonas",
+    x = "Date",
+    y = "Relative Humidity"
+  )
+```
+
+![](reference/figures/README-unnamed-chunk-7-1.png)
+
+## Citation
+
+- CARVALHO, Nelson Geraldo Aquino de; NASCIMENTO, Leonardo Brandão
+  Freitas do. **amazonasdatahub**. 2026.
+  <https://onelsoncarvalho.github.io/amazonasdatahub>.
+
 # Package index
 
 ## All functions
 
-- [`agriculture_amazonas`](agriculture_amazonas.md) :
-  agriculture_amazonas - Plant production data from the Institute of
+- [`agriculture_amazonas`](https://onelsoncarvalho.github.io/amazonasdatahub/reference/agriculture_amazonas.md)
+  : agriculture_amazonas - Plant production data from the Institute of
   Sustainable Agricultural and Forestry Development of Amazonas - IDAM
   (2023).
-- [`aids_amazonas`](aids_amazonas.md) : aids_amazonas - A dataset of
-  AIDS occurrences from 2011 to 2023 in Amazonas
-- [`gdp_amazonas`](gdp_amazonas.md) : gdp_amazonas - Gross Domestic
-  Product - GDP of Amazonas
-- [`humidity_manaus`](humidity_manaus.md) : humidity_manaus - Time
-  series with Extreme Values of Limited Range
-- [`malaria_amazonas`](malaria_amazonas.md) : malaria_amazonas - An
-  integrated dataset of malaria notifications in the state of Amazonas
-- [`prf_amazonas`](prf_amazonas.md) : prf_amazonas - Traffic accident
-  data from Amazonas recorded by Federal Highway Police (2012-2025)
-- [`rionegro_amazonas`](rionegro_amazonas.md) : rionegro_amazonas - A
-  dataset of the Rio Negro River (Amazonas) level from 2003 to 2023
-- [`srl_muni`](srl_muni.md) : srl_muni - School Read Levels - Physical
-  literacy and reading performance of amazonian schoolchildren
+- [`aids_amazonas`](https://onelsoncarvalho.github.io/amazonasdatahub/reference/aids_amazonas.md)
+  : aids_amazonas - A dataset of AIDS occurrences from 2011 to 2023 in
+  Amazonas
+- [`gdp_amazonas`](https://onelsoncarvalho.github.io/amazonasdatahub/reference/gdp_amazonas.md)
+  : gdp_amazonas - Gross Domestic Product - GDP of Amazonas
+- [`humidity_manaus`](https://onelsoncarvalho.github.io/amazonasdatahub/reference/humidity_manaus.md)
+  : humidity_manaus - Time series with Extreme Values of Limited Range
+- [`malaria_amazonas`](https://onelsoncarvalho.github.io/amazonasdatahub/reference/malaria_amazonas.md)
+  : malaria_amazonas - An integrated dataset of malaria notifications in
+  the state of Amazonas
+- [`prf_amazonas`](https://onelsoncarvalho.github.io/amazonasdatahub/reference/prf_amazonas.md)
+  : prf_amazonas - Traffic accident data from Amazonas recorded by
+  Federal Highway Police (2012-2025)
+- [`rionegro_amazonas`](https://onelsoncarvalho.github.io/amazonasdatahub/reference/rionegro_amazonas.md)
+  : rionegro_amazonas - A dataset of the Rio Negro River (Amazonas)
+  level from 2003 to 2023
+- [`srl_muni`](https://onelsoncarvalho.github.io/amazonasdatahub/reference/srl_muni.md)
+  : srl_muni - School Read Levels - Physical literacy and reading
+  performance of amazonian schoolchildren
 
 # Articles
 
-### Agropecuária
+### All vignettes
 
-Dados sobre produção agrícola e pecuária no estado do Amazonas.
-
-- [agriculture_amazonas](br/agriculture_amazonas.md):
-
-### Saúde
-
-Indicadores epidemiológicos de notificações de infecções e agravos em
-saúde.
-
-- [aids_amazonas](br/aids_amazonas.md):
-- [malaria_amazonas](br/malaria_amazonas.md):
-
-### Economia
-
-Séries temporais e indicadores do Produto Interno Bruto (PIB) do
-Amazonas.
-
-- [gdp_amazonas](br/gdp_amazonas.md):
-
-### Clima e Meio Ambiente
-
-Dados meteorológicos, umidade do ar em Manaus e cota dos níveis de rios.
-
-- [humidity_manaus](br/humidity_manaus.md):
-- [rionegro_amazonas](br/rionegro_amazonas.md):
-
-### Segurança Rodoviária
-
-Registros e ocorrências de acidentes de trânsito em rodovias federais.
-
-- [prf_amazonas](br/prf_amazonas.md):
-
-### Educação
-
-Pesquisas de desempenho escolar e Physical Literacy no ambiente
-educacional.
-
-- [srl_muni](br/srl_muni.md):
+- [agriculture_amazonas](https://onelsoncarvalho.github.io/amazonasdatahub/articles/br/agriculture_amazonas.md):
+- [aids_amazonas](https://onelsoncarvalho.github.io/amazonasdatahub/articles/br/aids_amazonas.md):
+- [gdp_amazonas](https://onelsoncarvalho.github.io/amazonasdatahub/articles/br/gdp_amazonas.md):
+- [humidity_manaus](https://onelsoncarvalho.github.io/amazonasdatahub/articles/br/humidity_manaus.md):
+- [malaria_amazonas](https://onelsoncarvalho.github.io/amazonasdatahub/articles/br/malaria_amazonas.md):
+- [prf_amazonas](https://onelsoncarvalho.github.io/amazonasdatahub/articles/br/prf_amazonas.md):
+- [rionegro_amazonas](https://onelsoncarvalho.github.io/amazonasdatahub/articles/br/rionegro_amazonas.md):
+- [srl_muni](https://onelsoncarvalho.github.io/amazonasdatahub/articles/br/srl_muni.md):
