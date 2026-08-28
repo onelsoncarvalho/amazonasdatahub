@@ -1,14 +1,53 @@
 # amazonasdatahub
 
-Versão em Português ===========
+O objetivo do `amazonasdatahub` é reunir bases de dados do Estado do
+Amazonas (AM), para a realização de estudos e preparação de materiais
+didáticos, além de facilitar o acesso a dados tratados e organizados,
+viabilizando pesquisa e ensino e permitindo a aplicação de métodos
+estatísticos.
 
-The goal of amazonasdatahub is to gather various data sets from the
-state of Amazonas (AM), Brazil, to which Deep Learning can be applied.
+A documentação completa de ambas as versões em Python e R estão
+disponíveis nos seguintes idiomas:
 
-With this open-source R package, you will have access to various
-datasets to apply Deep Learning and statistical methods.
+- [English
+  documentation](https://onelsoncarvalho.github.io/amazonasdatahubsite/en);
+- [🇧🇷 Documentação em Português
+  (BR)](https://onelsoncarvalho.github.io/amazonasdatahubsite);
 
-## Installation
+Documentação da versão em R e vignettes:
+
+- [English documentation for R
+  version](https://onelsoncarvalho.github.io/amazonasdatahub)
+- [🇧🇷 Documentação em Português (BR) para versão do
+  R](https://onelsoncarvalho.github.io/amazonasdatahub/br)
+
+## Visão Geral
+
+O pacote `amazonasdatahub` disponibiliza bases de dados de diversos
+tipos e fontes, e todas estão ligadas ao Estado do Amazonas.
+
+Lista das bases de dados disponíveis:
+
+| Base de dados | Área | Fonte |
+|:---|:--:|:---|
+| agriculture_amazonas | Agriculture and Livestock | Institute of Agricultural and Sustainable Forestry Development of the State of Amazonas - 2024 |
+| aids_amazonas | Health | Department of HIV, AIDS, Tuberculosis, Viral Hepatitis, and Sexually Transmitted Infections, 2024 |
+| gdp_amazonas | Economy | Scientific Journal of Applied Social and Clinical Science - TIME SERIES ANALYSIS FOR THE QUARTERLY GROSS DOMESTIC PRODUCT OF AMAZONAS |
+| humidity_manaus | Climate | NASCIMENTO, Leonardo Brandão Freitas; LIMA, Max Sousa; DUCZMAL, Luiz H. P-min-stable regression models for time series with extreme values of limited range. Environmetrics, Issue 2, v. 36, 2025. |
+| malaria_amazonas | Health | Lais Baroni, M. P. (2020). An Integrated Dataset of Malaria Notifications in the Legal Amazon (Dataset). Synapse. <https://doi.org/10.7303/SYN21552203> |
+| prf_amazonas | Road Safety | Brasil. Polícia Rodoviária Federal (PRF). Dados Abertos da PRF: Acidentes de Trânsito |
+| rionegro_amazonas | Environment | Porto de Manaus. Nível do Rio Negro |
+| srl_muni | Education | ALMEIDA, Thiago da Cruz de. Physical Literacy e desempenho em leitura de escolares amazônicos: um estudo de associação. 2024. 104 f. Dissertação (Mestrado em Educação) - Universidade Federal do Amazonas, Manaus, 2024. |
+
+## Instalação
+
+Para instalar o `amazonasdatahub`, é necessário ter as seguintes
+ferramentas instaladas no seu computador ou ambiente de desenvolvimento:
+
+- R versão 4.41.1 (2024-06-14) ou superior;
+- Pacote `remotes` no R.
+
+Você pode instalar a versão de desenvolvimento do `amazonasdatahub` com:
 
 To install amazonasdatahub, you need to have the following tools
 installed on your computer or development environment:
@@ -19,31 +58,40 @@ installed on your computer or development environment:
 You can install the development version of amazonasdatahub from
 [GitHub](https://github.com/) with:
 
-``` R
-# Install devtools package
-install.packages("devtools")
+``` r
 
-# Load devtools
-library(devtools)
+# Instalando o pacote remotes
+install.packages("remotes")
 
-# installing amazonasdatahub
-devtools::install_github("onelsoncarvalho/amazonasdatahub")
+# Carregando o remotes
+library(remotes)
+
+# Instalando o amazonasdatahub
+remotes::install_github("onelsoncarvalho/amazonasdatahub")
 ```
 
-## Usage
+## Uso e Exemplos
 
-Once the `amazonasdatahub` is installed, use library() or require() to
-load the package.
+### Carregando `amazonasdatahub`
 
-``` R
+Use a função [`library()`](https://rdrr.io/r/base/library.html) ou
+[`require()`](https://rdrr.io/r/base/library.html) para carregar o
+pacote.
+
+``` r
+
 library(amazonasdatahub)
 ```
+
+Você pode acessar a documentação de cada base de dados usando o operador
+de ajuda “`?`”.
 
 You can see the documentation of each dataset using the help operator
 “?”.
 
-``` R
-?agriculture_idam
+``` r
+
+?agriculture_amazonas
 ?aids_amazonas
 ?gdp_amazonas
 ?humidity_manaus
@@ -53,23 +101,29 @@ You can see the documentation of each dataset using the help operator
 ?slr_muni
 ```
 
-## Example
+### Exemplos
 
-The dataset `aids_amazonas` contains data of the AIDS occurrences in
-each municipality from Amazonas.
+#### Incidência de doenças
 
-One of the analysis that can be made is: visualize the time series of
-counts filtered by municipality, where each case is grouped by the
-sex/gender of each observation. To do this, we will use the dplyr
-package to structure the data and the ggplot2 package to create and
-customize the chart.
+A base de dados `aids_amazonas` fornece dados das ocorrências de AIDS
+nos municípios do Amazonas.
 
-``` R
+Uma das análises que podem ser feitas é: verificar a série temporal da
+contagem de casos filtrado de determinado município, onde os casos são
+agrupados pelo sexo do indivíduo observado. Para fazer isso,
+utilizaremos os pacotes `dplyr` para estruturar os dados, e o `ggplot`
+para fazer o gráfico e customizá-lo.
+
+``` r
+
 # Loading dplyr and ggplot to structure the data
 require(dplyr)
 require(ggplot2)
+```
 
-# Filtering by municipality and plotting case count by gender
+``` r
+
+# Filtrando por município e plotando a contagem de casos por gênero
 aids_amazonas %>%
   filter(name_muni == "Manaus") %>%
   group_by(gender) %>%
@@ -78,11 +132,49 @@ aids_amazonas %>%
   scale_color_manual(values = c("blue", "red")) +
   theme_minimal() +
   labs(
-    title = "AIDS ocurrences in Manaus (2011-2023)",
-    x = "Year",
-    y = "Case count",
-    color = "Gender"
+    title = "Contagem de casos de AIDS em Manaus (2011-2023)",
+    x = "Ano",
+    y = "Contagem",
+    color = "Gênero"
   )
 ```
 
 ![](reference/figures/README-unnamed-chunk-6-1.png)
+
+#### Séries Temporais
+
+Com o conjunto de dados `humidity_manaus`, que reune dados de umidade
+relativa observados na cidade de Manaus de janeiro de 2009 a dezembro de
+2020, podemos verificar séries temporais, e dentre elas, a da umidade
+relativa durante esse intervalo de tempo.
+
+Usando `dplyr`, podemos criar uma coluna de data, que será composta
+pelos dados de mês e ano, e com o `ggplot2`, podemos criar o gráfico.
+
+``` r
+
+# Carregando o dplyr e ggplot2
+require(dplyr)
+require(ggplot2)
+
+# Criando variavel de data unindo ano e mes, e em seguida,
+# plotando o grafico
+humidity_manaus %>%
+  mutate(date = as.Date(paste0(year, "-", month, "-","01"))) %>%
+  ggplot(aes(x = date, y = rh)) +
+  geom_line() +
+  theme_minimal() +
+  labs(
+    title = "Umidade Relativa de Manaus (2009 - 2020)",
+    x = "Data",
+    y = "Umidade Relativa"
+  )
+```
+
+![](reference/figures/README-unnamed-chunk-7-1.png)
+
+## Citação
+
+- CARVALHO, Nelson Geraldo Aquino de; NASCIMENTO, Leonardo Brandão
+  Freitas do. **amazonasdatahub**. 2026.
+  <https://onelsoncarvalho.github.io/amazonasdatahub>.
