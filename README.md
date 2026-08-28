@@ -17,15 +17,17 @@ Full documentation of both Python and R versions is available in the
 following languages/Documentação das versões em Python e R estão
 disponíveis nos seguintes idiomas:
 
-- [English](https://onelsoncarvalho.github.io/amazonasdatahubsite/en);
-- [🇧🇷 Português
-  (BR)](https://onelsoncarvalho.github.io/amazonasdatahubsite);
+- [English
+  documentation](https://onelsoncarvalho.github.io/amazonasdatahubsite/en)
+- [🇧🇷 Documentação em Português
+  (BR)](https://onelsoncarvalho.github.io/amazonasdatahubsite)
 
 R only documentation and vignettes:
 
-- [English](https://onelsoncarvalho.github.io/amazonasdatahub);
-- [🇧🇷 Português
-  (BR)](https://onelsoncarvalho.github.io/amazonasdatahub/br);
+- [English documentation for R
+  version](https://onelsoncarvalho.github.io/amazonasdatahub)
+- [🇧🇷 Documentação em Português (BR) para versão do
+  R](https://onelsoncarvalho.github.io/amazonasdatahub/br)
 
 ## Overview
 
@@ -90,7 +92,7 @@ You can check the documentation of each dataset using the help operator
 ?slr_muni
 ```
 
-### Usage examples
+### Examples
 
 #### Disease occurrence
 
@@ -151,7 +153,7 @@ humidity_manaus %>%
   geom_line() +
   theme_minimal() +
   labs(
-    title = "Relative Humidity of Amazonas",
+    title = "Relative Humidity of Amazonas (2009-2020)",
     x = "Date",
     y = "Relative Humidity"
   )
