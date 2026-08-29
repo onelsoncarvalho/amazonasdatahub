@@ -49,15 +49,6 @@ ferramentas instaladas no seu computador ou ambiente de desenvolvimento:
 
 Você pode instalar a versão de desenvolvimento do `amazonasdatahub` com:
 
-To install amazonasdatahub, you need to have the following tools
-installed on your computer or development environment:
-
-- R version 4.41.1 (2024-06-14) – “Race for Your Life”;
-- devtools package from R.
-
-You can install the development version of amazonasdatahub from
-[GitHub](https://github.com/) with:
-
 ``` r
 # Instalando o pacote remotes
 install.packages("remotes")
@@ -83,9 +74,6 @@ library(amazonasdatahub)
 
 Você pode acessar a documentação de cada base de dados usando o operador
 de ajuda “`?`”.
-
-You can see the documentation of each dataset using the help operator
-“?”.
 
 ``` r
 ?agriculture_amazonas
