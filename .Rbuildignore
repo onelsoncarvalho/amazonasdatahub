@@ -16,3 +16,4 @@
 ^README_br\.Rmd$
 ^README_br\.md$
 ^_pkgdown_br\.yml$
+^CRAN-SUBMISSION$
