@@ -41,12 +41,12 @@
 <p>O objetivo do <code>amazonasdatahub</code> é reunir bases de dados do Estado do Amazonas (AM), para a realização de estudos e preparação de materiais didáticos, além de facilitar o acesso a dados tratados e organizados, viabilizando pesquisa e ensino e permitindo a aplicação de métodos estatísticos.</p>
 <p>A documentação completa de ambas as versões em Python e R estão disponíveis nos seguintes idiomas:</p>
 <ul><li>
-<a href="https://onelsoncarvalho.github.io/amazonasdatahubsite/en">English documentation</a>;</li>
+<a href="https://onelsoncarvalho.github.io/amazonasdatahubsite/en/">English documentation</a>;</li>
 <li>
-<a href="https://onelsoncarvalho.github.io/amazonasdatahubsite">🇧🇷 Documentação em Português (BR)</a>;</li>
+<a href="https://onelsoncarvalho.github.io/amazonasdatahubsite/">🇧🇷 Documentação em Português (BR)</a>;</li>
 </ul><p>Documentação da versão em R e vignettes:</p>
-<ul><li><a href="https://onelsoncarvalho.github.io/amazonasdatahub">English documentation for R version</a></li>
-<li><a href="https://onelsoncarvalho.github.io/amazonasdatahub/br">🇧🇷 Documentação em Português (BR) para versão do R</a></li>
+<ul><li><a href="https://onelsoncarvalho.github.io/amazonasdatahub/">English documentation for R version</a></li>
+<li><a href="https://onelsoncarvalho.github.io/amazonasdatahub/br/">🇧🇷 Documentação em Português (BR) para versão do R</a></li>
 </ul><div class="section level2">
 <h2 id="visão-geral">Visão Geral<a class="anchor" aria-label="anchor" href="#vis%C3%A3o-geral"></a></h2>
 <p>O pacote <code>amazonasdatahub</code> disponibiliza bases de dados de diversos tipos e fontes, e todas estão ligadas ao Estado do Amazonas.</p>
@@ -85,8 +85,11 @@
 <p>Para instalar o <code>amazonasdatahub</code>, é necessário ter as seguintes ferramentas instaladas no seu computador ou ambiente de desenvolvimento:</p>
 <ul><li>R versão 4.41.1 (2024-06-14) ou superior;</li>
 <li>Pacote <code>remotes</code> no R.</li>
-</ul><p>Você pode instalar a versão de desenvolvimento do <code>amazonasdatahub</code> com:</p>
+</ul><p>Você pode instalar a versão do CRAN que será publicada, com:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"amazonasdatahub"</span><span class="op">)</span></span></code></pre></div>
+<p>Ou você pode instalar a versão de desenvolvimento do <code>amazonasdatahub</code> com:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Instalando o pacote remotes</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span></span>
 <span></span>
@@ -102,10 +105,11 @@
 <h3 id="carregando-amazonasdatahub">Carregando <code>amazonasdatahub</code>
 <a class="anchor" aria-label="anchor" href="#carregando-amazonasdatahub"></a></h3>
 <p>Use a função <code><a href="https://rdrr.io/r/base/library.html" class="external-link">library()</a></code> ou <code><a href="https://rdrr.io/r/base/library.html" class="external-link">require()</a></code> para carregar o pacote.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://onelsoncarvalho.github.io/amazonasdatahub/">amazonasdatahub</a></span><span class="op">)</span></span></code></pre></div>
 <p>Você pode acessar a documentação de cada base de dados usando o operador de ajuda “<code>?</code>”.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<p>You can see the documentation of each dataset using the help operator “?”.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="op">?</span><span class="va">agriculture_amazonas</span></span>
 <span><span class="op">?</span><span class="va">aids_amazonas</span></span>
 <span><span class="op">?</span><span class="va">gdp_amazonas</span></span>
@@ -121,11 +125,11 @@
 <h4 id="incidência-de-doenças">Incidência de doenças<a class="anchor" aria-label="anchor" href="#incid%C3%AAncia-de-doen%C3%A7as"></a></h4>
 <p>A base de dados <code>aids_amazonas</code> fornece dados das ocorrências de AIDS nos municípios do Amazonas.</p>
 <p>Uma das análises que podem ser feitas é: verificar a série temporal da contagem de casos filtrado de determinado município, onde os casos são agrupados pelo sexo do indivíduo observado. Para fazer isso, utilizaremos os pacotes <code>dplyr</code> para estruturar os dados, e o <code>ggplot</code> para fazer o gráfico e customizá-lo.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Loading dplyr and ggplot to structure the data</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Filtrando por município e plotando a contagem de casos por gênero</span></span>
 <span><span class="va">aids_amazonas</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">name_muni</span> <span class="op">==</span> <span class="st">"Manaus"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
@@ -146,7 +150,7 @@
 <h4 id="séries-temporais">Séries Temporais<a class="anchor" aria-label="anchor" href="#s%C3%A9ries-temporais"></a></h4>
 <p>Com o conjunto de dados <code>humidity_manaus</code>, que reune dados de umidade relativa observados na cidade de Manaus de janeiro de 2009 a dezembro de 2020, podemos verificar séries temporais, e dentre elas, a da umidade relativa durante esse intervalo de tempo.</p>
 <p>Usando <code>dplyr</code>, podemos criar uma coluna de data, que será composta pelos dados de mês e ano, e com o <code>ggplot2</code>, podemos criar o gráfico.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Carregando o dplyr e ggplot2</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>

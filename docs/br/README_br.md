@@ -10,16 +10,16 @@ A documentação completa de ambas as versões em Python e R estão
 disponíveis nos seguintes idiomas:
 
 - [English
-  documentation](https://onelsoncarvalho.github.io/amazonasdatahubsite/en);
+  documentation](https://onelsoncarvalho.github.io/amazonasdatahubsite/en/);
 - [🇧🇷 Documentação em Português
-  (BR)](https://onelsoncarvalho.github.io/amazonasdatahubsite);
+  (BR)](https://onelsoncarvalho.github.io/amazonasdatahubsite/);
 
 Documentação da versão em R e vignettes:
 
 - [English documentation for R
-  version](https://onelsoncarvalho.github.io/amazonasdatahub)
+  version](https://onelsoncarvalho.github.io/amazonasdatahub/)
 - [🇧🇷 Documentação em Português (BR) para versão do
-  R](https://onelsoncarvalho.github.io/amazonasdatahub/br)
+  R](https://onelsoncarvalho.github.io/amazonasdatahub/br/)
 
 ## Visão Geral
 
@@ -30,14 +30,14 @@ Lista das bases de dados disponíveis:
 
 | Base de dados | Área | Fonte |
 |:---|:--:|:---|
-| agriculture_amazonas | Agropecuária | Institute of Agricultural and Sustainable Forestry Development of the State of Amazonas - 2024 |
-| aids_amazonas | Saúde | Department of HIV, AIDS, Tuberculosis, Viral Hepatitis, and Sexually Transmitted Infections, 2024 |
-| gdp_amazonas | Economia | Scientific Journal of Applied Social and Clinical Science - TIME SERIES ANALYSIS FOR THE QUARTERLY GROSS DOMESTIC PRODUCT OF AMAZONAS |
-| humidity_manaus | Clima | NASCIMENTO, Leonardo Brandão Freitas; LIMA, Max Sousa; DUCZMAL, Luiz H. P-min-stable regression models for time series with extreme values of limited range. Environmetrics, Issue 2, v. 36, 2025. |
-| malaria_amazonas | Saúde | Lais Baroni, M. P. (2020). An Integrated Dataset of Malaria Notifications in the Legal Amazon (Dataset). Synapse. <https://doi.org/10.7303/SYN21552203> |
-| prf_amazonas | Segurança viária | Brasil. Polícia Rodoviária Federal (PRF). Dados Abertos da PRF: Acidentes de Trânsito |
-| rionegro_amazonas | Meio ambiente | Porto de Manaus. Nível do Rio Negro |
-| srl_muni | Educação | ALMEIDA, Thiago da Cruz de. Physical Literacy e desempenho em leitura de escolares amazônicos: um estudo de associação. 2024. 104 f. Dissertação (Mestrado em Educação) - Universidade Federal do Amazonas, Manaus, 2024. |
+| agriculture_amazonas | Agriculture and Livestock | Institute of Agricultural and Sustainable Forestry Development of the State of Amazonas - 2024 |
+| aids_amazonas | Health | Department of HIV, AIDS, Tuberculosis, Viral Hepatitis, and Sexually Transmitted Infections, 2024 |
+| gdp_amazonas | Economy | Scientific Journal of Applied Social and Clinical Science - TIME SERIES ANALYSIS FOR THE QUARTERLY GROSS DOMESTIC PRODUCT OF AMAZONAS |
+| humidity_manaus | Climate | NASCIMENTO, Leonardo Brandão Freitas; LIMA, Max Sousa; DUCZMAL, Luiz H. P-min-stable regression models for time series with extreme values of limited range. Environmetrics, Issue 2, v. 36, 2025. |
+| malaria_amazonas | Health | Lais Baroni, M. P. (2020). An Integrated Dataset of Malaria Notifications in the Legal Amazon (Dataset). Synapse. <https://doi.org/10.7303/SYN21552203> |
+| prf_amazonas | Road Safety | Brasil. Polícia Rodoviária Federal (PRF). Dados Abertos da PRF: Acidentes de Trânsito |
+| rionegro_amazonas | Environment | Porto de Manaus. Nível do Rio Negro |
+| srl_muni | Education | ALMEIDA, Thiago da Cruz de. Physical Literacy e desempenho em leitura de escolares amazônicos: um estudo de associação. 2024. 104 f. Dissertação (Mestrado em Educação) - Universidade Federal do Amazonas, Manaus, 2024. |
 
 ## Instalação
 
@@ -47,7 +47,14 @@ ferramentas instaladas no seu computador ou ambiente de desenvolvimento:
 - R versão 4.41.1 (2024-06-14) ou superior;
 - Pacote `remotes` no R.
 
-Você pode instalar a versão de desenvolvimento do `amazonasdatahub` com:
+Você pode instalar a versão do CRAN que será publicada, com:
+
+``` r
+install.packages("amazonasdatahub")
+```
+
+Ou você pode instalar a versão de desenvolvimento do `amazonasdatahub`
+com:
 
 ``` r
 # Instalando o pacote remotes
@@ -125,7 +132,7 @@ aids_amazonas %>%
   )
 ```
 
-![](reference/figures/README-unnamed-chunk-6-1.png)
+![](reference/figures/README-unnamed-chunk-7-1.png)
 
 #### Séries Temporais
 
@@ -156,7 +163,7 @@ humidity_manaus %>%
   )
 ```
 
-![](reference/figures/README-unnamed-chunk-7-1.png)
+![](reference/figures/README-unnamed-chunk-8-1.png)
 
 ## Citação
 

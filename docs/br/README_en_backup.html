@@ -52,11 +52,11 @@
 <!-- badges: end -->
 <p>The goal of <code>amazonasdatahub</code> is to aggregate databases from the State of Amazonas (AM), Brazil, for conducting studies and preparing educational materials, as well as to facilitate access to organized and processed data, thereby supporting research and teaching and enabling the application of statistical methods.</p>
 <p>Full documentation of both Python and R versions is available in the following languages/Documentação das versões em Python e R estão disponíveis nos seguintes idiomas:</p>
-<ul><li><a href="https://onelsoncarvalho.github.io/amazonasdatahubsite/en" class="external-link">English documentation</a></li>
-<li><a href="https://onelsoncarvalho.github.io/amazonasdatahubsite" class="external-link">🇧🇷 Documentação em Português (BR)</a></li>
+<ul><li><a href="https://onelsoncarvalho.github.io/amazonasdatahubsite/en/" class="external-link">English documentation</a></li>
+<li><a href="https://onelsoncarvalho.github.io/amazonasdatahubsite/" class="external-link">🇧🇷 Documentação em Português (BR)</a></li>
 </ul><p>R only documentation and vignettes:</p>
-<ul><li><a href="https://onelsoncarvalho.github.io/amazonasdatahub" class="external-link">English documentation for R version</a></li>
-<li><a href="https://onelsoncarvalho.github.io/amazonasdatahub/br">🇧🇷 Documentação em Português (BR) para versão do R</a></li>
+<ul><li><a href="https://onelsoncarvalho.github.io/amazonasdatahub/" class="external-link">English documentation for R version</a></li>
+<li><a href="https://onelsoncarvalho.github.io/amazonasdatahub/br/">🇧🇷 Documentação em Português (BR) para versão do R</a></li>
 </ul><div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a></h2>
 <p>This <code>amazonasdatahub</code> package provides databases from various types and sources, all of which concern the State of Amazonas.</p>
@@ -96,8 +96,11 @@
 <ul><li>R version 4.41.1 (2024-06-14) or above;</li>
 <li>
 <code>remotes</code> package from R.</li>
-</ul><p>You can install the development version of <code>amazonasdatahub</code> with:</p>
+</ul><p>You can install the CRAN version that will be published with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"amazonasdatahub"</span><span class="op">)</span></span></code></pre></div>
+<p>Or you can install the development version of <code>amazonasdatahub</code> with:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Install remotes package</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span></span>
 <span></span>
@@ -113,10 +116,10 @@
 <h3 id="loading-amazonasdatahub">Loading <code>amazonasdatahub</code>
 <a class="anchor" aria-label="anchor" href="#loading-amazonasdatahub"></a></h3>
 <p>Use <code><a href="https://rdrr.io/r/base/library.html" class="external-link">library()</a></code> or <code><a href="https://rdrr.io/r/base/library.html" class="external-link">require()</a></code> to load the package.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://onelsoncarvalho.github.io/amazonasdatahub/" class="external-link">amazonasdatahub</a></span><span class="op">)</span></span></code></pre></div>
 <p>You can check the documentation of each dataset using the help operator “?”.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="op">?</span><span class="va">agriculture_amazonas</span></span>
 <span><span class="op">?</span><span class="va">aids_amazonas</span></span>
 <span><span class="op">?</span><span class="va">gdp_amazonas</span></span>
@@ -132,11 +135,11 @@
 <h4 id="disease-occurrence">Disease occurrence<a class="anchor" aria-label="anchor" href="#disease-occurrence"></a></h4>
 <p>The dataset <code>aids_amazonas</code> contains data of the AIDS occurrences in each municipality from Amazonas.</p>
 <p>One of the analysis that can be made is: visualize the time series of counts filtered by municipality, where each case is grouped by the sex/gender of each observation. To do this, we will use the dplyr package to structure the data and the ggplot2 package to create and customize the chart.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Loading dplyr and ggplot to structure the data</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Filtering by municipality and plotting case count by gender</span></span>
 <span><span class="va">aids_amazonas</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">name_muni</span> <span class="op">==</span> <span class="st">"Manaus"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
@@ -151,13 +154,13 @@
 <span>    y <span class="op">=</span> <span class="st">"Case count"</span>,</span>
 <span>    color <span class="op">=</span> <span class="st">"Gender"</span></span>
 <span>  <span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-unnamed-chunk-6-1.png" alt="" width="100%"></p>
+<p><img src="reference/figures/README-unnamed-chunk-7-1.png" alt="" width="100%"></p>
 </div>
 <div class="section level4">
 <h4 id="time-series">Time Series<a class="anchor" aria-label="anchor" href="#time-series"></a></h4>
 <p>The <code>humidity_manaus</code> consists of the minimum relative humidity observed in the city of Manaus from January 2009 to December 2020. We can visualize the time series of the relative humidity during this time interval.</p>
 <p>Using <code>dplyr</code>, it is possible to create a date column, which will be composed of the month and year. Using<code>ggplot2</code>, the time series chart can be plotted.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Loading dplyr and ggplot to structure the data</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
@@ -173,7 +176,7 @@
 <span>    x <span class="op">=</span> <span class="st">"Date"</span>,</span>
 <span>    y <span class="op">=</span> <span class="st">"Relative Humidity"</span></span>
 <span>  <span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-unnamed-chunk-7-1.png" alt="" width="100%"></p>
+<p><img src="reference/figures/README-unnamed-chunk-8-1.png" alt="" width="100%"></p>
 </div>
 </div>
 </div>

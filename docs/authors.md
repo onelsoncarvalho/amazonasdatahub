@@ -8,12 +8,12 @@
 
 ## Citation
 
-Carvalho N, Nascimento L (2026). *amazonasdatahub: Datasets from
-Amazonas (AM) to apply Deep Learning and statistical methods*. R package
-version 1.2.1, <https://onelsoncarvalho.github.io/amazonasdatahub/>.
+Carvalho N, Nascimento L (2026). *amazonasdatahub: Integrating Data,
+Research, and Education*. R package version 1.2.1,
+<https://onelsoncarvalho.github.io/amazonasdatahub/>.
 
     @Manual{,
-      title = {amazonasdatahub: Datasets from Amazonas (AM) to apply Deep Learning and statistical methods},
+      title = {amazonasdatahub: Integrating Data, Research, and Education},
       author = {Nelson Carvalho and Leonardo Nascimento},
       year = {2026},
       note = {R package version 1.2.1},

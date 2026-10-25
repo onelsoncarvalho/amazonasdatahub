@@ -57,12 +57,11 @@ installed on your computer or development environment:
 
 You can install the CRAN version that will be published with:
 
-```r
+``` r
 install.packages("amazonasdatahub")
 ```
 
 Or you can install the development version of `amazonasdatahub` with:
-
 
 ``` r
 # Install remotes package
@@ -135,7 +134,7 @@ aids_amazonas %>%
   )
 ```
 
-<img src="man/figures/README-unnamed-chunk-6-1.png" alt="" width="100%" />
+<img src="man/figures/README-unnamed-chunk-7-1.png" alt="" width="100%" />
 
 #### Time Series
 
@@ -166,7 +165,7 @@ humidity_manaus %>%
   )
 ```
 
-<img src="man/figures/README-unnamed-chunk-7-1.png" alt="" width="100%" />
+<img src="man/figures/README-unnamed-chunk-8-1.png" alt="" width="100%" />
 
 ## Citation
 

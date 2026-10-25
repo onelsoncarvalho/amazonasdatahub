@@ -11,16 +11,16 @@ following languages/Documentação das versões em Python e R estão
 disponíveis nos seguintes idiomas:
 
 - [English
-  documentation](https://onelsoncarvalho.github.io/amazonasdatahubsite/en)
+  documentation](https://onelsoncarvalho.github.io/amazonasdatahubsite/en/)
 - [🇧🇷 Documentação em Português
-  (BR)](https://onelsoncarvalho.github.io/amazonasdatahubsite)
+  (BR)](https://onelsoncarvalho.github.io/amazonasdatahubsite/)
 
 R only documentation and vignettes:
 
 - [English documentation for R
-  version](https://onelsoncarvalho.github.io/amazonasdatahub)
+  version](https://onelsoncarvalho.github.io/amazonasdatahub/)
 - [🇧🇷 Documentação em Português (BR) para versão do
-  R](https://onelsoncarvalho.github.io/amazonasdatahub/br)
+  R](https://onelsoncarvalho.github.io/amazonasdatahub/br/)
 
 ## Overview
 
@@ -48,7 +48,13 @@ installed on your computer or development environment:
 - R version 4.41.1 (2024-06-14) or above;
 - `remotes` package from R.
 
-You can install the development version of `amazonasdatahub` with:
+You can install the CRAN version that will be published with:
+
+``` r
+install.packages("amazonasdatahub")
+```
+
+Or you can install the development version of `amazonasdatahub` with:
 
 ``` r
 # Install remotes package
@@ -122,7 +128,7 @@ aids_amazonas %>%
   )
 ```
 
-![](reference/figures/README-unnamed-chunk-6-1.png)
+![](reference/figures/README-unnamed-chunk-7-1.png)
 
 #### Time Series
 
@@ -153,7 +159,7 @@ humidity_manaus %>%
   )
 ```
 
-![](reference/figures/README-unnamed-chunk-7-1.png)
+![](reference/figures/README-unnamed-chunk-8-1.png)
 
 ## Citation
 

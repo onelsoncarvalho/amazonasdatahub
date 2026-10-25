@@ -56,11 +56,12 @@ ferramentas instaladas no seu computador ou ambiente de desenvolvimento:
 
 Você pode instalar a versão do CRAN que será publicada, com:
 
-```r
+``` r
 install.packages("amazonasdatahub")
 ```
 
-Ou você pode instalar a versão de desenvolvimento do `amazonasdatahub` com:
+Ou você pode instalar a versão de desenvolvimento do `amazonasdatahub`
+com:
 
 ``` r
 # Instalando o pacote remotes
@@ -136,7 +137,7 @@ aids_amazonas %>%
   )
 ```
 
-<img src="man/figures/README-unnamed-chunk-6-1.png" alt="" width="100%" />
+<img src="man/figures/README-unnamed-chunk-7-1.png" alt="" width="100%" />
 
 #### Séries Temporais
 
@@ -167,7 +168,7 @@ humidity_manaus %>%
   )
 ```
 
-<img src="man/figures/README-unnamed-chunk-7-1.png" alt="" width="100%" />
+<img src="man/figures/README-unnamed-chunk-8-1.png" alt="" width="100%" />
 
 ## Citação
 
