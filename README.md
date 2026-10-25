@@ -55,7 +55,14 @@ installed on your computer or development environment:
 - R version 4.41.1 (2024-06-14) or above;
 - `remotes` package from R.
 
-You can install the development version of `amazonasdatahub` with:
+You can install the CRAN version that will be published with:
+
+```r
+install.packages("amazonasdatahub")
+```
+
+Or you can install the development version of `amazonasdatahub` with:
+
 
 ``` r
 # Install remotes package

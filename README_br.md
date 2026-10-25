@@ -56,7 +56,7 @@ ferramentas instaladas no seu computador ou ambiente de desenvolvimento:
 
 Você pode instalar a versão do CRAN que será publicada, com:
 
-```{r, eval=FALSE}
+```r
 install.packages("amazonasdatahub")
 ```
 
