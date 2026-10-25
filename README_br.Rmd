@@ -55,7 +55,13 @@ Para instalar o `amazonasdatahub`, é necessário ter as seguintes ferramentas i
 - R versão 4.41.1 (2024-06-14) ou superior;
 - Pacote `remotes` no R.
 
-Você pode instalar a versão de desenvolvimento do `amazonasdatahub` com:
+Você pode instalar a versão do CRAN que será publicada, com:
+
+```{r, eval=FALSE}
+install.packages("amazonasdatahub")
+```
+
+Ou você pode instalar a versão de desenvolvimento do `amazonasdatahub` com:
 
 ```{r eval=FALSE}
 # Instalando o pacote remotes
@@ -67,6 +73,7 @@ library(remotes)
 # Instalando o amazonasdatahub
 remotes::install_github("onelsoncarvalho/amazonasdatahub")
 ```
+
 
 ## Uso e Exemplos
 
