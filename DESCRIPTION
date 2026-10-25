@@ -1,12 +1,12 @@
 Package: amazonasdatahub
-Title: Datasets from Amazonas (AM) to apply Deep Learning and statistical methods
+Title: Integrating Data, Research, and Education
 Version: 1.2.1
 Authors@R: 
     c(
       person("Nelson", "Carvalho", email = "nelsoncarvalho.negocios@gmail.com", role = c("aut", "cre")),
       person("Leonardo", "Nascimento", email = "nascimento@ufam.edu.br", role = c("aut"))
     )
-Description: A package of various datasets from the state of Amazonas (AM), Brazil, to apply Deep Learning and statistical methods.
+Description: Various datasets from the state of Amazonas (AM), Brazil, to apply Deep Learning and statistical methods.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -19,5 +19,6 @@ Imports:
     dplyr,
     ggplot2
 Suggests:
+    rmarkdown,
     forcats
 URL: https://onelsoncarvalho.github.io/amazonasdatahub/
