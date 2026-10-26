@@ -167,6 +167,21 @@ humidity_manaus %>%
 
 ## Citação
 
-- CARVALHO, Nelson Geraldo Aquino de; NASCIMENTO, Leonardo Brandão
-  Freitas do. **amazonasdatahub**. 2026.
-  <https://onelsoncarvalho.github.io/amazonasdatahub>.
+Para citar `amazonasdatahub` em publicações, usar:
+
+> CARVALHO, Nelson Geraldo Aquino de., & NASCIMENTO, Leonardo Brandão
+> Freitas do. (2026). *amazonasdatahub: Integrando Dados, Pesquisa e
+> Ensino*. R package version 1.2.1. Disponível em:
+> <https://onelsoncarvalho.github.io/amazonasdatahub/>
+
+Em BibTex para LaTeX:
+
+``` bibtex
+@Manual{amazonasdatahub2026,
+  title  = {amazonasdatahub: Integrando Dados, Pesquisa e Ensino},
+  author = {Nelson Geraldo Aquino de Carvalho and Leonardo Brandão Freitas do Nascimento},
+  year   = {2026},
+  note   = {R package version 1.2.1},
+  url    = {https://onelsoncarvalho.github.io/amazonasdatahub/}
+}
+```
